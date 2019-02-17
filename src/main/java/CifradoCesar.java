@@ -15,6 +15,12 @@ public class CifradoCesar {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        char [] abecedario = new char [26];
+        int b=0;
+        for (char a='a'; a<='z';a++){
+            abecedario[b]=a;
+            b++;
+        }
     }
     
 }
