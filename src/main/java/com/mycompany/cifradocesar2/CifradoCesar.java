@@ -19,17 +19,19 @@ public class CifradoCesar {
         short codigo;
         char tipo;
         do{
-            System.out.print("(c) cifrar o (d) descifrar?: ");
-            tipo = entrada.next().charAt(0);
-        }while(tipo != 'c' && tipo != 'd');
-        do{
             System.out.print("Introduce un texto: ");
             datoEntrada = entrada.nextLine();
         }while(datoEntrada.isEmpty());
+        
+        do{
+            System.out.print("(c) cifrar o (d) descifrar?: ");
+            tipo = entrada.next().charAt(0);
+        }while(tipo != 'c' && tipo != 'd');
+        
         do{
             System.out.print("Introduce el código: ");
             codigo = entrada.nextShort();
-        }while(codigo >= 0);
+        }while(codigo == 0);
         if(tipo=='c'){
             System.out.println("Texto cifrado: " + cifradoCesar(datoEntrada, codigo));
         }else{
